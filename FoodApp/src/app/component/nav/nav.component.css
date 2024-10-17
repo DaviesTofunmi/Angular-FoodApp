@@ -1,0 +1,39 @@
+nav {
+  
+   
+    padding-top: 1.5rem;
+    width: 100%;
+  
+
+    display: flex;
+    align-items: center;
+    gap: 46vh;
+    align-items: center;
+
+    h4{
+        margin-left: 2.5rem;
+        font-weight: 900;
+        color: rgb(221,139,65) ;
+    }
+}
+
+.navRight {
+    display: flex;
+    gap: 3.5vh;
+    p{
+        font-size: 13px;
+        color: rgb(106, 104, 104);
+    }
+}
+
+
+
+
+
+
+
+@media only screen and (max-width: 767px) {
+    .navRight {
+        display: none;
+    }
+}

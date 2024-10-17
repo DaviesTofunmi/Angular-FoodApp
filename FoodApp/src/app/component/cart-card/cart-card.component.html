@@ -1,0 +1,19 @@
+<div *ngIf="derivedData; else loading">
+<div class="row border-top border-bottom " *ngFor="let item of derivedData; let i =index">
+    <div class="row main align-items-center">
+        <div class="col-2"><img class="img-fluid " src="http://localhost:8000/firstApp/admin/{{item.product_img}}" ></div>
+        <div class="col">
+            <div class="row text-muted">{{item.product_name}}</div>
+            <p class=" MyText">{{item.product_desc}}</p>
+        </div>
+        <div class="col ">
+            <span class="mySpan"  (click)="decreaseQuantity(i)">-</span><a href="#" class="border ms-3">{{item.quantity}}</a><span (click)="increaseQuantity(i)" class="ms-3 mySpan">+</span>
+        </div>
+        <div class="col ">&euro; {{item.product_price}} <span (click)="deleteItem(i)" class="close">&#10005;</span></div>
+    </div>
+</div>
+</div>
+
+<ng-template #loading>
+    <p>Loading...</p>
+  </ng-template>

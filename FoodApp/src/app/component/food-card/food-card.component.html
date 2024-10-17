@@ -1,0 +1,21 @@
+
+<div class="Card"  *ngFor="let food of derivedData; let i =index">
+    <div class="cardContent">
+      <div class="img_div">
+        
+        <img src="http://localhost:8000/firstApp/admin/{{food.product_img}}" alt="">
+      </div>
+        <div class="q2">
+           <div class="q2_top">
+            
+            <h4>{{food.product_name}}</h4> <span>${{food.product_price}}</span>
+        </div>
+            <p>
+              {{food.product_desc}}
+            </p>
+         
+           <button (click)="addItem(i)">Order Now</button>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+<p>testing works!</p>
+   <button (click)="openSnackBar()" mat-raised-button>Basic</button>
+   <button mat-fab extended>
+   
+    <mat-icon>favorite</mat-icon>
+    Basic
+  </button>
+  <h6>{{date | date:'short'}}</h6>
+  <h5>{{date | date:'medium'}}</h5>
+  <h4>{{date | date:'long'}}</h4>
+<br>
+<h6>{{message | uppercase}}</h6>
+<h6>{{message | lowercase}}</h6>
+<h6>{{amount | currency: 'GBP'}}</h6>
+  <br>
+  <br>
+  <mat-accordion>
+    <mat-expansion-panel hideToggle>
+      <mat-expansion-panel-header>
+        <mat-panel-title> This is the expansion title </mat-panel-title>
+        <mat-panel-description> This is a summary of the content </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>This is the primary content of the panel.</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="panelOpenState.set(true)" (closed)="panelOpenState.set(false)">
+      <mat-expansion-panel-header>
+        <mat-panel-title> Self aware panel </mat-panel-title>
+        <mat-panel-description>
+          Currently I am {{panelOpenState() ? 'open' : 'closed'}}
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <p>I'm visible because I am open</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  
