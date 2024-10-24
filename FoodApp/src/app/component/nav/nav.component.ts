@@ -1,11 +1,15 @@
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
+import {MatButtonModule} from '@angular/material/button'
+import {MatIconModule} from '@angular/material/icon';
+
+
 
 @Component({
   selector: 'app-nav',
   standalone: true,
-  imports: [],
+  imports: [ MatButtonModule, MatIconModule],
   templateUrl: './nav.component.html',
   styleUrl: './nav.component.css'
 })
@@ -16,6 +20,10 @@ export class NavComponent {
   
   }
   public date= new Date().getDay();
+
+  public goToCart(){
+    this.router.navigate(['cart'])
+  }
 
 
 

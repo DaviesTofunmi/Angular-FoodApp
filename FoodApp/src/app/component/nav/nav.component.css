@@ -1,14 +1,16 @@
 nav {
   
    
-    padding-top: 1.5rem;
+    padding-top: 1.9rem;
     width: 100%;
   
 
     display: flex;
-    align-items: center;
-    gap: 46vh;
-    align-items: center;
+
+
+    gap: 43vh;
+   
+  
 
     h4{
         margin-left: 2.5rem;
@@ -17,7 +19,7 @@ nav {
     }
 }
 
-.navRight {
+.navMiddle {
     display: flex;
     gap: 3.5vh;
     p{
@@ -25,15 +27,96 @@ nav {
         color: rgb(106, 104, 104);
     }
 }
+.navRight_Mobile{
+    display: none;
+}
+.dropdown{
+    display: none;
+    position: absolute;
+    background-color: white;
+
+    flex-direction: column;
+    gap: 5%;
+    left: 0;
+    top: 10%;
+    width: 91.6%;
+    height: 100%;
+    padding: 1rem;
+    padding-top: 5rem;
+    h5{
+        display: flex;
+        justify-content: space-between;
+        font-size: 22px;
+        color: rgb(107, 105, 105);
+    }
+}
+.navRight{
+    display: flex;
+    gap: 20%;
+
+    width: 8%;
+    mat-icon{
+        cursor: pointer;
+    }
+}
+.navRight_Mobile:focus-within .dropdown{
+    display: flex;
+    
+}
+
+@media only screen and (min-width: 992px) and (max-width: 1199px) {
+    .navRight{
+      
+        margin-left: -9rem;
 
 
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 991px) {
+    .navMiddle {
+        display: none;
+    }
+    nav{
+
+        justify-content: space-between;
+        
+    }
+    .navRight{
+        display: none;
+    }
+    .navRight_Mobile{
+        display: block;
+        margin-bottom: 2rem;
+        margin-right: 2rem;
 
 
-
+   
+    }
+}
 
 
 @media only screen and (max-width: 767px) {
-    .navRight {
+  
+    .navMiddle {
         display: none;
+    }
+    nav{
+       display: flex;
+       align-items: center;
+       justify-content: space-between;
+        gap: 50%;
+        
+     
+    }
+    .navRight{
+        display: none;
+    }
+    .navRight_Mobile{
+        display: block;
+        margin-bottom: 2rem;
+        margin-right: 1rem;
+
+   
     }
 }

@@ -1,12 +1,35 @@
+
+
 <nav>
     <h4>Å√Å</h4>
    
   
-     <div class="navRight">
+     <div class="navMiddle">
          <p>Home</p>
          <p>Food Menu</p>
          <p>Reserve Table</p>
          <p>Packages</p>
          <p>About us</p>
+         
      </div>
+     <div class="navRight">
+        <mat-icon (click)="goToCart()">shopping_cart</mat-icon>
+        <mat-icon>person</mat-icon>
+     </div>
+     <div class="navRight_Mobile">
+        <button style="background-color: white;" mat-mini-fab aria-label="Example icon button with a menu icon">
+            <mat-icon>menu</mat-icon>
+          </button>
+        <div class="dropdown">
+            <h5>Cart <mat-icon>keyboard_arrow_right</mat-icon></h5>
+            <h5>Food Menu <mat-icon>keyboard_arrow_right</mat-icon></h5>
+            <h5>Reserve Table <mat-icon>keyboard_arrow_right</mat-icon></h5>
+            <h5>Packages <mat-icon>keyboard_arrow_right</mat-icon></h5>
+            <h5>About us</h5>
+            
+            
+        </div>
+
+     </div>
+     
  </nav>

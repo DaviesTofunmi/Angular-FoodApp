@@ -5,6 +5,7 @@
 
 body {
     font-family: "Poppins", system-ui;
+
   
 }
 
@@ -171,17 +172,27 @@ body {
     .sect1_right img {
       height: 50%;
     }
-    .itemss {
-      flex-direction: column;
-    }
+   
   }
-  
+  /* @media only screen and (min-width: 700px) and (max-width: 767px) {
+    app-food-card {
+      
+    flex-direction: column;
+
+    }
+  } */
  /* Extra small screens (mobiles) */
 @media only screen and (max-width: 767px) {
+  body{
     
-  
+   
+    overflow-x: hidden;
+  }
+
     .sect1 {
       height: auto;
+    
+      width: 98%;
       
       flex-direction: column-reverse;
     }
@@ -222,17 +233,21 @@ body {
     .sect1_right {
       width: 100%;
       
+      
       height: auto;
       margin-top: 2rem;
     }
     .sect1_right img {
       width: 100%;
       height: auto;
+      
     }
     .itemss {
         display: flex;
-  
+     
+       
       flex-direction: column;
+     
       
     }
     .OrderNow, .OrderFood {
@@ -240,19 +255,30 @@ body {
       margin: 1rem 0;
     }
     .sect2 {
-        
+
+  
+     width: 98%;
       padding-top: 2rem;
       padding-bottom: 2rem;
       h1{
-        font-size: 2.5em;
+        font-size: 1.8em;
+        margin-right: 4rem;
       }
       p{
-        font-size: 0.75em;
+        font-size: 0.7em;
+        margin-right: 1rem;
         width: 95%;
+    
       }
     }
     .sect2_content {
       padding: 0 1rem;
     }
+    app-food-card{
+      flex-direction: column;
+  
+      padding-right: 6rem;
+    }
+   
    
   }
